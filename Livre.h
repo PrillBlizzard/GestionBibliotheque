@@ -25,6 +25,5 @@ class Livre {
     std::string getISBN();
     std::vector<std::string> getEmprunteurs();
 
-    
-
-}
+    void info();
+};

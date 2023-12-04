@@ -40,4 +40,18 @@ std::vector<std::string> Livre::getEmprunteurs(){
     return emprunteurs;
 }
 
+void Livre::info(){
+    std::cout << std::endl << "Voici les infos de ce livre : " << std::endl;
+    std::cout << "  - Titre : " << titre << std::endl;
+    std::cout << "  - Auteur : " << auteur << std::endl;
+    std::cout << "  - Genre : " << genre << std::endl;
+    std::cout << "  - Langue : " << langue << std::endl;
+    std::cout << "  - Date de publication : " << toString(publication) << std::endl;
+    std::cout << "  - ISBN : " << iSBN << std::endl;
+    std::cout << "  - La liste des derniers eprunteurs : " << std::endl;
+    for(int i = 0; i < emprunteurs.size(); i++){
+        std::cout << "      - " << emprunteurs[i] << std::endl;
 
+
+    }
+}

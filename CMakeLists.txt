@@ -33,7 +33,9 @@ set(TARGET app)
 set(SOURCE_FILES 
 	Date.h 
 	Date.cpp 
-	main.cpp)
+	main.cpp
+	Livre.h
+	Livre.cpp)
 
 # create the executable from the source files
 add_executable(${TARGET} ${SOURCE_FILES})
