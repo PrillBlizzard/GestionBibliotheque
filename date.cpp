@@ -10,10 +10,9 @@
 
 #include "date.h"
 #include <assert.h> 
+#include <string>
 
-
-
-Date::Date(int month, int day) : _month(month), _day(day) {
+Date::Date(int year, int month, int day) : _year(year), _month(month), _day(day) {
     bool status = isDate(month, day);
     assert(status && "Date is not valid");
 }
@@ -26,6 +25,10 @@ int Date::day() const {
 	return _day;
 }
 
+int Date::year() const{
+    return _year;
+}
+
 void Date::updateMonth(int month) {
     bool status = isDate(month, _day);
     assert(status==true && "New month is not valid");
@@ -36,6 +39,10 @@ void Date::updateDay(int day) {
     bool status = isDate(_month, day);
     assert(status==true && "New day is not valid");
     _day = day;
+}
+
+void Date::updateYear(int year) {
+    _year = year;
 }
 
 void Date::next() {
@@ -66,12 +73,6 @@ void Date::back() {
     }
 }
 
-/**
- * 
- * Helper functions 
- * 
-*/
-
 bool isDate(int month, int day) {
     if ((day < 1) || (day>31)) return false;
     if ((month <1) || (month>12)) return false;
@@ -99,6 +100,5 @@ int dayOfYear(Date d) {
 }
 
 std::string toString(Date d) {
-    return std::to_string(d.day()) + "/" + std::to_string(d.month()) ;
+    return std::to_string(d.day()) + "/" + std::to_string(d.month()) + "/" + std::to_string(d.year()) ;
 }
-
