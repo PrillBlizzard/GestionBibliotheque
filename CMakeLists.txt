@@ -31,11 +31,13 @@ set(TARGET app)
 # Define the list of source files to compile
 # Replace the following list (file1.cpp, ...) by your cpp files to compile
 set(SOURCE_FILES 
-	Date.h 
-	Date.cpp 
+	./Source/Date/Date.h 
+	./Source/Date/Date.cpp 
 	main.cpp
-	Livre.h
-	Livre.cpp)
+	./Source/Livre/Livre.h
+	./Source/Livre/Livre.cpp
+	./Source/Auteur/Auteur.h
+	./Source/Auteur/Auteur.cpp)
 
 # create the executable from the source files
 add_executable(${TARGET} ${SOURCE_FILES})
