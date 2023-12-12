@@ -14,7 +14,9 @@ class Livre {
     public:
 
     Livre(std::string _titre, Auteur _auteur, std::string _langue,
-        std::string _genre, Date _publication, std::string _ISBN );
+        std::string _genre, Date _publication, std::string _ISBN);
+    Livre();
+    
     void nouvelEmprunteur(std::string _idEmprunteur);
     
     std::string getTitre();

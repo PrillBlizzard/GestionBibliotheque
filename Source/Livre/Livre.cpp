@@ -12,6 +12,7 @@ Livre::Livre(std::string _titre, Auteur _auteur, std::string _langue,
 
         }
 
+
 void Livre::nouvelEmprunteur(std::string _idEmprunteur){
 
     emprunteurs.push_back(_idEmprunteur);

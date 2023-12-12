@@ -37,7 +37,9 @@ set(SOURCE_FILES
 	./Source/Livre/Livre.h
 	./Source/Livre/Livre.cpp
 	./Source/Auteur/Auteur.h
-	./Source/Auteur/Auteur.cpp)
+	./Source/Auteur/Auteur.cpp
+	./Source/Lecteur/Lecteur.h
+	./Source/Lecteur/Lecteur.cpp)
 
 # create the executable from the source files
 add_executable(${TARGET} ${SOURCE_FILES})
