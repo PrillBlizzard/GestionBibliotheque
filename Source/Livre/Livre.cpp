@@ -13,12 +13,6 @@ Livre::Livre(std::string _titre, Auteur _auteur, std::string _langue,
         }
 
 
-void Livre::nouvelEmprunteur(std::string _idEmprunteur){
-
-    emprunteurs.push_back(_idEmprunteur);
-
-}
-
 std::string Livre::getTitre(){
     return titre;
 }
@@ -41,6 +35,10 @@ std::vector<std::string> Livre::getEmprunteurs(){
     return emprunteurs;
 }
 
+void Livre::nouvelEmprunteur(std::string _idEmprunt){
+    emprunteurs.push_back(_idEmprunt);
+}
+
 void Livre::info(){
     std::cout << std::endl << "Voici les infos de ce livre : " << std::endl;
     std::cout << "  - Titre : " << titre << std::endl;
@@ -49,7 +47,7 @@ void Livre::info(){
     std::cout << "  - Langue : " << langue << std::endl;
     std::cout << "  - Date de publication : " << toString(publication) << std::endl;
     std::cout << "  - ISBN : " << iSBN << std::endl;
-    std::cout << "  - La liste des derniers eprunteurs : " << std::endl;
+    std::cout << "  - La liste des derniers emprunteurs : " << std::endl;
     for(int i = 0; i < emprunteurs.size(); i++){
         std::cout << "      - " << emprunteurs[i] << std::endl;
     }

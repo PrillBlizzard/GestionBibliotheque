@@ -13,11 +13,10 @@ class Livre {
     
     public:
 
-    Livre(std::string _titre, Auteur _auteur, std::string _langue,
-        std::string _genre, Date _publication, std::string _ISBN);
-    Livre();
+    Livre(std::string _titre="", Auteur _auteur=Auteur(), std::string _langue="",
+        std::string _genre="", Date _publication=Date(), std::string _ISBN="");
     
-    void nouvelEmprunteur(std::string _idEmprunteur);
+    void nouvelEmprunteur(std::string _idEmprunt);
     
     std::string getTitre();
     Auteur getAuteur();

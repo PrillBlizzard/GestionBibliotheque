@@ -33,9 +33,8 @@ void Lecteur::info(){
     std::cout << "  - Prenom : " << prenom << std::endl;
     std::cout << "  - Nom : " << nom << std::endl;
     std::cout << "  - Identifiant Numerique : " << uniqueID << std::endl;
-    std::cout << "  - La liste des ISBN des livres empruntes : " << std::endl; 
+    std::cout << "  - La liste des ISBN des livres emprunteurs : " << std::endl; 
     for(int i=0; i < bookList.size(); i++){
-
         std::cout << "      - " << bookList[i] <<  std::endl;
     }
     std::cout << std::endl;

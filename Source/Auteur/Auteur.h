@@ -11,8 +11,8 @@ class Auteur {
     Date dateNaissance;
 
     public:
-    Auteur(std::string _NumID = "None", std::string _Nom="Unknown",
-        std::string _Prenom="Unknown", Date _DateNaissance=Date());
+    Auteur(std::string _NumID = "", std::string _Nom="",
+        std::string _Prenom="", Date _DateNaissance=Date());
 
     std::string getNumID();
     std::string getNom();
